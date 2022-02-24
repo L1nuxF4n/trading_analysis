@@ -265,7 +265,7 @@ while cnt <= ma_cnt:
             # LONG price moved above slow avg
 
                 prev_trade_price =  prev_trade_price + (prev_trade_price * prev_trade_price_adj)
-                if ((prev_trade_signal == "LONG - STOP LOSS" or prev_trade_signal == "LONG EXIT") and curr_price > prev_trade_price) or (prev_trade_signal != "LONG - STOP LOSS" and prev_trade_signal != "LONG EXIT"):
+                if ((prev_trade_signal == "LONG - STOP LOSS" or prev_trade_signal == "EXIT LONG") and curr_price > prev_trade_price) or (prev_trade_signal != "LONG - STOP LOSS" and prev_trade_signal != "EXIT LONG"):
                     buy_signal = "BUY LONG"
                     bought_price = curr_price
                     stop_loss_price = curr_price - (curr_price * stop_loss_percent) 
